@@ -10,9 +10,7 @@ let total = 0;
 
 let numbersArr = new Array();
 
-
-btn1.addEventListener("click", () => {
-
+function insertNumber() {
     const txtNumber = document.getElementById("txtNum").value;
 
     let num;
@@ -25,13 +23,22 @@ btn1.addEventListener("click", () => {
         console.log(numbersArr);
         document.getElementById("txtNum").value = "";
     } else {
-        alert("Please input a number");
+        alert("Please input a positive number");
         document.getElementById("txtNum").value = "";
         return;
     }
 
     iterateNumbers();
-    
+}
+
+btn1.addEventListener("click", () => {
+    insertNumber();
+});
+
+document.getElementById("txtNum").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        insertNumber();
+    }
 });
 
 btn2.addEventListener("click", () => {
