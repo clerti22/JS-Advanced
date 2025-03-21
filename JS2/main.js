@@ -2,7 +2,6 @@ const btnInsertUpdate = document.getElementById("btnInsertUpdate");
 const btnClearItems = document.getElementById("btnClearItems");
 const btnClear = document.getElementById("btnClear");
 const tblRecords = document.getElementById("tblRecords");
-
 let arrRecords = new Array();
 const tblTHsLabels = ["First Name", "Middle Name", "Last Name", "Age", "Action"];
 
